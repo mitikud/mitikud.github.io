@@ -17,7 +17,7 @@ a img {
 
 /* a:hover, a:active, a:focus { */
 
-tr img {
+img {
     width: 250px;
 }
 
@@ -27,15 +27,12 @@ tr img {
     font-family: 'RocknRoll One', sans-serif;
 }
 
-table {
-    width: 80%;
-}
 
 .profile {
     display: flex;
 }
  
-.profile-description {
+.profileDescription {
     padding-left: 40px;
     display: grid;
     align-items: center;
@@ -56,13 +53,4 @@ span {
 
 p , li, caption {
     color: white;
-}
-
-.special-section {
-    margin-top: 60px;
-}
-
-.tg-channel {
-    font-size: small;
-    font-style: italic;
 }
