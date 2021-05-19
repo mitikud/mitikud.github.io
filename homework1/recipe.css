@@ -1,8 +1,6 @@
 
 body {
     background-color: black;
-    
-
 }
 
 h1 {
@@ -10,7 +8,13 @@ h1 {
     color: #A4A400;
 }
 #main {
+    margin-left: auto;
+    margin-right: auto;
     background-color: whitesmoke;
     width: 70%;
     background-image: url("https://mitikud.github.io/homework1/silverware.jpg");
+}
+
+.comment {
+    background-color: wheat;
 }
