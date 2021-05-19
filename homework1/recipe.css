@@ -1,9 +1,14 @@
 
 body {
     background-color: black;
+    
 
 }
 
+h1 {
+    background-color:#F0F0F0;
+    color: #A4A400;
+}
 #main {
     background-color: whitesmoke;
     width: 70%;
