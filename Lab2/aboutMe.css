@@ -33,10 +33,11 @@ img {
 }
  
 .profileDescription {
-    color: white;
+    
     padding-left: 40px;
     display: grid;
     align-items: center;
+    color: rgb(250, 245, 245);
 }
 
 h1, h2, h3, a {
