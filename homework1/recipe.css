@@ -8,7 +8,7 @@ h1 {
     color: #A4A400;
 }
 
-#ul_style {
+.ul_style {
     list-style-image: url("https://mitikud.github.io/homework1/pie_icon.gif");
 }
 #main {
