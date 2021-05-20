@@ -41,10 +41,10 @@ footer div.copyRight {
     line-height: 2px;
 
 }
-.userComent {
+.userComent .comment {
     background-color: #FFFFA8;
     font-style: italic;
 }
-.userComent .comment {
+.comment {
     margin-top: 15px;
 }
