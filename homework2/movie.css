@@ -11,3 +11,27 @@ body {
     justify-content: center;
     background: local repeat-x url(bannerbg.png) ;
 }
+
+.container {
+  position: relative;
+  display: flex;
+  justify-self: center;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+    font-size: 24pt;
+    text-shadow: 3px 3px #999999;
+}
+
+.content, .overall {
+    max-width: 800px;
+    display: flex;
+}
+
+.overall{
+    flex-direction: row-reverse;
+    background-color: transparent;
+}
