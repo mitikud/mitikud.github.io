@@ -1,1 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: local repeat url("background.png");
+    font-size: 8pt;
+    font-family: Verdana,  Tahoma, sans-serif;
+}
 
+.banner {
+    display: flex;
+    justify-content: center;
+    background: local repeat-x url(bannerbg.png) ;
+}
