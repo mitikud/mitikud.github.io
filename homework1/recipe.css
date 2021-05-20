@@ -54,7 +54,7 @@ footer div.copyRight {
 .comment {
     margin-top: 15px;
 }
-.heading{
+.heading, h1{
     text-align: center;
 }
 .timeTable{
