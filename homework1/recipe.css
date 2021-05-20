@@ -41,10 +41,15 @@ footer div.copyRight {
     line-height: 2px;
 
 }
-.userComent .comment {
+.userComent .comment blockquote{
     background-color: #FFFFA8;
     font-style: italic;
 }
 .comment {
     margin-top: 15px;
+}
+
+.timeTable{
+  margin-top: 0.25em;
+  border-bottom: 1px solid #c0c0c0;  
 }
