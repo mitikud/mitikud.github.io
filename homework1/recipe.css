@@ -41,8 +41,18 @@ h1, h2 {
 footer div {
     float: left;
 }
-footer div.copyRight {
-    
+div.copyRight {
+    padding-top: 10px;
+    clear: both;
+    text-align: right;
+    display: block;
+    font-family: monospace;
+    line-height: 2px;
+
+}
+footer {
+    padding-top: 10px;
+    clear: both;
     text-align: right;
     display: block;
     font-family: monospace;
