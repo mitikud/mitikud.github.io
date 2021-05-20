@@ -7,9 +7,15 @@ body {
 
 }
 
-h1 {
+h1, h2 {
     background-color:#F0F0F0;
     color: #A4A400;
+    font-size: 18pt;
+    font-family:'Lucida Sans Unicode', Arial, Helvetica;
+    text-decoration: underline;
+    display: inline-block;
+    letter-spacing: 00.25em;
+
 }
 
 .ul_style {
@@ -41,14 +47,16 @@ footer div.copyRight {
     line-height: 2px;
 
 }
-.userComent .comment blockquote{
+.userComent, .comment, blockquote{
     background-color: #FFFFA8;
     font-style: italic;
 }
 .comment {
     margin-top: 15px;
 }
-
+.heading{
+    text-align: center;
+}
 .timeTable{
   margin-top: 0.25em;
   border-bottom: 1px solid #c0c0c0;  
