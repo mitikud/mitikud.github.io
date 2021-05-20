@@ -51,8 +51,15 @@ li > a {
 
 span {
     color:  #FFFFA8 ;
+    ;
 }
 
 p , li, caption {
     color: white;
+}
+table {
+    width: 80%;
+}
+tr img {
+    width: 250px;
 }
