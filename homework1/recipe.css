@@ -38,6 +38,9 @@ h1, h2 {
 .search {
     display: block;
 }
+footer div {
+    float: left;
+}
 footer div.copyRight {
     padding-top: 10px;
     clear: both;
