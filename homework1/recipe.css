@@ -25,6 +25,19 @@ h1 {
     background-attachment: fixed;
 }
 
+.validatorTool {
+    display: inline;
+    clear: both;
+}
+footer div.copyRight {
+    padding-top: 10px;
+    clear: both;
+    text-align: right;
+    display: block;
+    font-family: monospace;
+    line-height: 2px;
+
+}
 .comment {
     background-color: rgb(232, 241, 99);
 }
