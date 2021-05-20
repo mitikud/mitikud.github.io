@@ -29,6 +29,9 @@ h1 {
     display: inline;
     clear: both;
 }
+.search {
+    display: block;
+}
 footer div.copyRight {
     padding-top: 10px;
     clear: both;
