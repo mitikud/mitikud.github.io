@@ -42,8 +42,7 @@ footer div {
     float: left;
 }
 footer div.copyRight {
-    padding-top: 10px;
-    clear: both;
+    
     text-align: right;
     display: block;
     font-family: monospace;
