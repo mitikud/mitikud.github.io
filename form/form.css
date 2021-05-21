@@ -1,47 +1,47 @@
 * {
-	font-size: 12pt;
-	font-family: "Verdana", "Geneva", sans-serif;
+ font-size: 12pt;
+ font-family: "Verdana", "Geneva", sans-serif;
 }
 
 a {
-	color: #F44;
-	text-decoration: none;
+ color: #F44;
+ text-decoration: none;
 }
 
 a:hover {
-	background-color: #FFA;
+ background-color: #FFA;
 }
 
 a img {
-	border: none;
+ border: none;
 }
 
 body {
-	background-color: white;
-	padding-left: 1em;
+ background-color: white;
+ padding-left: 1em;
 }
 
 body > div, form {
-	overflow: hidden;
-	width: 35em;
+ overflow: hidden;
+ width: 35em;
 }
 
 div {
-	overflow: hidden;
+ overflow: hidden;
 }
 
 /* form styles */
 fieldset {
     display: flex;
     flex-direction: row;
-	background-color: #E0E0FF;
-	border: 2px outset gray;
-	border-radius: 10px;
+ background-color: #E0E0FF;
+ border: 2px outset gray;
+ border-radius: 10px;
 }
 
 
 header {
-	margin-bottom: 2em;
+ margin-bottom: 2em;
 }
 
 
@@ -51,9 +51,9 @@ input{
 }
 
 input[type="submit"] {
-	background-color: #FAA;
-	font-size: 120%;
-	font-weight: bold;
+ background-color: #FAA;
+ font-size: 120%;
+ font-weight: bold;
     width: 100px;
     
 
@@ -61,9 +61,9 @@ input[type="submit"] {
 }
 
 legend {
-	background-color: white;
-	border: 2px outset gray;
-	padding: 0.2em;
+ background-color: white;
+ border: 2px outset gray;
+ padding: 0.2em;
 }
 
 label{
@@ -81,29 +81,4 @@ label{
     flex-direction: column;
     margin-right:   40px;
     float: left;
-}
-
-div{
-    margin: 10px;
-    padding: 20px;
-    background-color: rgb(136, 13, 252);
-    border-radius: 5px;
-    width: 300px;
-}
-
-#btn{
-    background-color: rgb(216, 145, 145);
-    font-weight: bold;
-    font-size: 100%;
-}
-input{
-    margin: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-label{
-    font-weight: bold;
-
-}
-body{
-    background-color: gray;
 }
