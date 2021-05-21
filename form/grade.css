@@ -4,12 +4,16 @@
 }
 
 body {
-	background-color:gray;
+	background-color:white;
 	padding-left: 1em;
 }
 
+body > div, form {
+	overflow: hidden;
+	width: 35em;
+}
 fieldset {
-	background-color:silver;
+	background-color: #E0E0FF;
 	border: 2px outset gray;
 	border-radius: 10px;
 }
