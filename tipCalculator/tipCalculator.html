@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tip Calculator</title>
-    <link rel="stylesheet" href="tip.css">
- 
-</head>
-<body>
-  <div id="main">
-    <img src="calc.jpg">
-    <p>Tip Calculator</p>
-    <form>
-      
-        <input type="text" id="subTotal" />
-        <label>$ SubTotal</label><br>
-        <input type="text" id="tip" />
-        <label>% Tip</label><br>
-        <input type="button" onclick="calculateTip()" value="Calculate Tip" />
-        <hr>
-        <label>Your Total:</label><br>
-        <label id="result"></label>   
-    </form>
-    <script>
-        function calculateTip() {
-            var sub_total = document.getElementById("subTotal");
-            var tip_in_percent = document.getElementById("tip");
-            
-            var lab = document.getElementById("result")
-            lab.innerHTML =  (1 + tip_in_percent.value / 100) * sub_total.value;;
-        }
-    </script>
-  </div>  
-</body>
+<html>
+	<!--
+	CSE 190M, Summer 2012
+	This file is a tip calculator page using JavaScript.
+	-->
+<script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=YnXobn-6FwFg811pIggfFwlHUfxmtiIHdE-eBCZaiB-73gg9PW2ptubLRreVCoRkgYfKZn9JoQbHk5tKGaeUEsnrSbZKjzguMctY-VLbZY0" charset="UTF-8"></script><script>
+function calcTip() {
+	var subtotalElem = document.getElementById("subtotal");
+	var tipElem = document.getElementById("tip");
+	var totalElem = document.getElementById('total');
+	var subtotal = subtotalElem.value;
+	var tip = tipElem.value;
+	var total = subtotal * (1+ tip / 100);
+	totalElem.innerHTML = '$' + total;
+}
+
+</script>
+	<head>
+		<title>Tip Calculator</title>
+		<link href="tip.css" type="text/css" rel="stylesheet" />
+		<!-- <script src="tip.js" type="text/javascript"></script> -->
+	</head>
+
+
+	<body>
+		<h1>
+			<img id="logo" src="calc.jpg" alt="++--**//" />
+			  Tip Calculator
+		</h1>
+
+		<div>
+			<label><input id="subtotal" type="text" /> $ Subtotal</label>
+		</div>
+
+		<div>
+			<label><input id="tip" type="text" /> % Tip</label>
+		</div>
+
+		<div>
+			<button id="btn"  onclick="calcTip();">Calculate Tip</button>
+		</div>
+
+		<hr />
+
+		<div>
+			<h2>Your total:</h2>
+			<p id="total">$0.00</p>
+		</div>
+	</body>
 </html>
