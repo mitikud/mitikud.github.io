@@ -3,11 +3,11 @@
 	<head>
 		<title>Text Decorator</title>
 		<link href="decoratemytext.css" type="text/css" rel="stylesheet" />
-
+		<link href="decorate.css" type="text/css" rel="stylesheet" />
 		
 		<!-- link to your script file here -->
 		
-	<script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=6EBHrcGY4W1jOvjs5JjzU-8jtBbtnZt0Caqkokh0dXwZB0jPEAcuMoGSu_gRrbYxtDxi-n19eL8SEKf9V78bLKEwTvOjWpu_5lj5KVD6mZwCDK5Tck5vEzRSCKzS7qsR" charset="UTF-8"></script></head>
+	<script type="text/javascript" src="decoratemytext.js" charset="UTF-8"></script></head>
 
 	<body>
 		<h1>Text Decorator</h1>
@@ -18,5 +18,17 @@
 
 		<!-- Your UI controls go here -->
 		
+		<fieldset>
+			<legend>Text</legend>
+			<textarea rows = 4 columns = 30 id="txtDecoration"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Decoration</legend>
+			<button onclick="callAlert();">Bigger Decoration</button><br>
+			<input type="checkbox" id="decorate"><br>
+			<label for = "decorate">Bling</label>
+
+		</fieldset>
 	</body>
 </html>
