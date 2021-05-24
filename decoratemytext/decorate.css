@@ -10,7 +10,7 @@ fieldset {
     padding: 0px;
 }
 
-.func {
+.func, p, span {
     color: red;
     font-weight: bold;
 }
