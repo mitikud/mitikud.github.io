@@ -9,3 +9,7 @@ fieldset {
     width: 30%;
     padding: 0px;
 }
+
+span {
+    color: red;
+}
