@@ -28,3 +28,16 @@ function onChange(){
     document.body.style.backgroundImage = "url('fun.jpg')";
 
 }
+
+function toMalkovitch(){
+    var txtDecoValue= document.getElementById("txtDecoration").value;
+    var txtDecoArrays =  txtDecoValue.split(/\s+/);
+    var markov = "";
+    for(let i = 0; i<txtDecoArrays.length;i++){
+        if(txtDecoArrays[i].length >= 5){
+            txtDecoArrays[i] = "Malkovich";
+        }
+        markov += txtDecoArrays[i] + " ";
+    }
+    document.getElementById("txtDecoration").value = markov;
+}

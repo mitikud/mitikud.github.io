@@ -19,17 +19,29 @@
         </li>
 
         <li><dt>What do the following 2 alerts display (answer without running the code)?</dt>
+            <pre>
+            var myfunc = function(a, x) {
+                return a * x;
+            };
+            var x = myfunc(2, 3);
+            var y = myfunc;
+            alert(x);
+            alert(y(2,3)); </pre>
             
         </li>
 
         <li><dt>Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!”</dt>
-            <ul><li>SetTimeout(booyah, 2000);</li><br><span id="span1">
-                <pre>function booyah1() {
-                alert("BOOYAH");
-            } </pre></span>
-                <li>SetTimeout(booyah(), 2000);</li><br><span id="span2"><pre>function booyah2(){
+            <ul><li>SetTimeout(booyah, 2000);</li>
+                <pre class="func">
+                    function booyah1() {
+                        alert("BOOYAH");
+                    } </pre>
+                <li>SetTimeout(booyah(), 2000);</li><br>
+                    <pre class="func">
+                function booyah2(){
                     setTimeout(booyah1,2000);
-                }</pre></span>
+                }</pre>
+                    
                 
             </ul>
         
