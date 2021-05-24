@@ -1,11 +1,9 @@
-
-
-
-window.onload = function(){
-    document.getElementById("keepDeco").onclick = keepDecoration;
-    document.getElementById("bling").onchange = onChangeFn;
-    document.getElementById("pigLatin").onclick = pigLatin;
-    document.getElementById("malkovitch").onclick = toMalkovitch
+$(loaded)
+function loaded(){
+    $("keepDeco").onclick = keepDecoration;
+    $("bling").onchange = onChangeFn;
+    $("pigLatin").onclick = pigLatin;
+    $("malkovitch").onclick = toMalkovitch
 }
 var callDecoration = function(){
     var txtDeco = document.getElementById("txtDecoration");
@@ -24,27 +22,27 @@ var keepDecoration = function() {
         clearInterval(timer);
         timer = null;
     }
-}
+} 
 
 var onChangeFn = function(){
     
+    
     //alert("checkbox is checked");
-    var txtDeco = document.getElementById("txtDecoration");
-    if(document.getElementById("bling").checked){
-        txtDeco.style.fontWeight = "bold";
-        txtDeco.style.textDecoration = "underline";
-        txtDeco.style.color = "green";
-        document.body.style.backgroundImage = "url('fun.jpg')";
+    var txtDeco = $("txtDecoration");
+    if($("bling").checked){
+        txtDeco.attrib("fontWeight","bold");
+        txtDeco.attrib("textDecoration","underline");
+        txtDeco.attrib("color","green");
+        $("body").attrib("backgroundImage", "url('fun.jpg')");
     }
     else{
-        txtDeco.style.fontWeight = "";
-        txtDeco.style.textDecoration = "";
-        txtDeco.style.color = "black";
-        document.body.style.backgroundImage = "url('')";
+        txtDeco.attrib("fontWeight","");
+        txtDeco.attrib("textDecoration","");
+        txtDeco.attrib("color","black");
+        $("body").attrib("backgroundImage", "url('')");
     }
     
-    
-
+   
 }
 
 
