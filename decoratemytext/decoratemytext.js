@@ -29,6 +29,29 @@ function onChange(){
 
 }
 
+
+function pigLatin(){
+    var txtDecoValue= document.getElementById("txtDecoration").value;
+    var txtDecoArrays =  txtDecoValue.split(/\s+/);
+    var pigLatinWord = "";
+    for(let i = 0; i<txtDecoArrays.length;i++){
+        if(txtDecoArrays[i].charAt(0).match("[aeiouAEIOU]")){
+            var word= txtDecoArrays[i] + "ay";
+        }
+        else{
+            var wordAti = txtDecoArrays[i];
+           for(let j = 0; j < wordAti.length; j++) {
+               if(wordAti[j].match("[aeiouAEIOU]")) {
+                   var word = wordAti.substring(j) + wordAti.substring(0,j)+"ay";
+                   break;
+               }
+           }
+        }
+        pigLatinWord += word + " ";
+    }
+    document.getElementById("txtDecoration").value = pigLatinWord;
+}
+
 function toMalkovitch(){
     var txtDecoValue= document.getElementById("txtDecoration").value;
     var txtDecoArrays =  txtDecoValue.split(/\s+/);
