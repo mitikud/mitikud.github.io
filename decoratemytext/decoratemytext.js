@@ -22,4 +22,10 @@ function onChange(){
     //alert("checkbox is checked");
     var txtDeco = document.getElementById("txtDecoration");
     txtDeco.style.fontWeight = "bold";
+    txtDeco.style.textDecoration = "underline";
+    txtDeco.style.color = "green";
+    
+    document.body.style.backgroundImage = "url('fun.jpg')";
+
+        
 }
