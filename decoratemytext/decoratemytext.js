@@ -1,8 +1,8 @@
 function callDecoration(){
-    //var txtDeco = document.getElementById("txtDecoration");
+    var txtDeco = document.getElementById("txtDecoration");
     //txtDeco.style.fontSize="24pt";
-    //document.getElementById("txtDecoration").style.fontSize = parseInt(document.getElementById("txtDecoration").style.fontSize)+ 2 + "em";
-    document.getElementById("txtDecoration").style.fontSize = parseInt(document.getElementById("txtDecoration").style.fontSize) + 2 + "pt";
+    var txtSize = parseInt(window.getComputedStyle(txtDeco).fontSize);
+    txtDeco.style.fontSize = txtSize + 2 + "pt";
 
 }   
 
