@@ -27,5 +27,4 @@ function onChange(){
     
     document.body.style.backgroundImage = "url('fun.jpg')";
 
-        
 }

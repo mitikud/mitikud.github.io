@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="decorate.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="decoratemytext.js"></script>
+
     <title>Javascript Exercises</title>
 </head>
 <body>
@@ -16,9 +18,22 @@
             </ul>
         </li>
 
-        <li><dt>What do the following 2 alerts display (answer without running the code)?</dt></li>
+        <li><dt>What do the following 2 alerts display (answer without running the code)?</dt>
+            
+        </li>
 
-        <li><dt>. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!”</dt></li>
+        <li><dt>Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!”</dt>
+            <ul><li>SetTimeout(booyah, 2000);</li><br><span id="span1">
+                <pre>function booyah1() {
+                alert("BOOYAH");
+            } </pre></span>
+                <li>SetTimeout(booyah(), 2000);</li><br><span id="span2"><pre>function booyah2(){
+                    setTimeout(booyah1,2000);
+                }</pre></span>
+                
+            </ul>
+        
+        </li>
 
         <li><dt>What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons for using it)?</dt></li>
 

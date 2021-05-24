@@ -12,4 +12,10 @@ fieldset {
 
 span {
     color: red;
+    font-weight: bold;
+}
+
+pre {
+    font-size: 14pt;
+    font-weight: bold;
 }
