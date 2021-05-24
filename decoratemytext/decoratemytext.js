@@ -1,4 +1,11 @@
-function callDecoration(){
+
+window.onload = function(){
+    document.getElementById("keepDeco").onclick = keepDecoration;
+    document.getElementById("bling").onchange = onChangeFn;
+    document.getElementById("pigLatin").onclick = pigLatin;
+    document.getElementById("malkovitch").onclick = toMalkovitch
+}
+var callDecoration = function(){
     var txtDeco = document.getElementById("txtDecoration");
     //txtDeco.style.fontSize="24pt";
     var txtSize = parseInt(window.getComputedStyle(txtDeco).fontSize);
@@ -7,7 +14,7 @@ function callDecoration(){
 }   
 
 timer = null;
-function keepDecoration() {
+var keepDecoration = function() {
     if(timer == null) {
         timer = setInterval(callDecoration, 500);
     }
@@ -17,20 +24,29 @@ function keepDecoration() {
     }
 }
 
-function onChange(){
+var onChangeFn = function(){
     
     //alert("checkbox is checked");
     var txtDeco = document.getElementById("txtDecoration");
-    txtDeco.style.fontWeight = "bold";
-    txtDeco.style.textDecoration = "underline";
-    txtDeco.style.color = "green";
+    if(document.getElementById("bling").checked){
+        txtDeco.style.fontWeight = "bold";
+        txtDeco.style.textDecoration = "underline";
+        txtDeco.style.color = "green";
+        document.body.style.backgroundImage = "url('fun.jpg')";
+    }
+    else{
+        txtDeco.style.fontWeight = "";
+        txtDeco.style.textDecoration = "";
+        txtDeco.style.color = "black";
+        document.body.style.backgroundImage = "url('')";
+    }
     
-    document.body.style.backgroundImage = "url('fun.jpg')";
+    
 
 }
 
 
-function pigLatin(){
+var pigLatin = function(){
     var txtDecoValue= document.getElementById("txtDecoration").value;
     var txtDecoArrays =  txtDecoValue.split(/\s+/);
     var pigLatinWord = "";
@@ -52,7 +68,7 @@ function pigLatin(){
     document.getElementById("txtDecoration").value = pigLatinWord;
 }
 
-function toMalkovitch(){
+var toMalkovitch = function(){
     var txtDecoValue= document.getElementById("txtDecoration").value;
     var txtDecoArrays =  txtDecoValue.split(/\s+/);
     var markov = "";
