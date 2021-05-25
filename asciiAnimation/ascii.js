@@ -14,6 +14,6 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("select.fontSelector").change(function(){
         var fontSelectedSize = $(this).children("option:selected").val();
-        alert("You have selected the country - " + fontSelectedSize);
+        alert("You have selected font Size of - " + fontSelectedSize);
     });
 });
