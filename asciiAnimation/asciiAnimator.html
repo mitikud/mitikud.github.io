@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="asciiAnimator.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCIImation</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script type="text/javascript" src="ascii.js"></script>
+</head>
+<body>
+   <div id="main">
+       <p>CSE 190 M ASCII Animation Viewer</p>
+       <textarea cols="80" rows="20"></textarea>
+       <div id="section">
+           <div>
+            <fieldset>
+                <legend>play control</legend>
+                <button>play</button>
+                <button>stop</button>
+            </fieldset>
+           </div>
+
+           <div>
+               <fieldset><legend>Animation</legend>
+                <select id="myTextarea">
+                    <option>Blank</option>
+                    <option value="">Exercise</option>
+                    <option value="">Juggler</option>
+                    <option value="">Bike</option>
+                    <option value="">Dive</option>
+                    <option value="">Custom</option>
+                </select>
+            </fieldset>
+           </div>
+
+           <div>
+            <fieldset><legend>size</legend>
+            
+            <select class="fontSelector">
+                <option>Blank</option>
+                <option value="">Tiny</option>
+                <option value="">Small</option>
+                <option value="">Medium</option>
+                <option value="">Large</option>
+                <option value="">Extra Large</option>
+                <option>XXL</option>
+            </select>
+            
+            </fieldset>
+           </div>
+
+           <div>
+               <fieldset><legend>Speed</legend>
+                    <label><input type="checkbox">Turbo</label>
+            </fieldset>
+           </div>
+        </div>
+        <div id="footer">
+            <a href="">
+            <img style="border:0;width:88px;height:31px" src="../w3c-html.png" alt="html validator"><br>
+            </a>
+
+            <a href="">
+                <img style="border:0;width:88px;height:31px" src="../w3c-html.png" alt="html validator"><br>
+            </a>
+
+            <a href="">
+                <img style="border:0;width:88px;height:31px" src="../w3c-html.png" alt="html validator">
+            </a>
+        </div>
+   </div> 
+   
+</body>
+</html>

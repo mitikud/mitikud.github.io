@@ -4,7 +4,13 @@
 		<title>Text Decorator</title>
 		<link href="decoratemytext.css" type="text/css" rel="stylesheet" />
 		<link href="decorate.css" type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("select.country").change(function(){
+					var selectedCountry = $(this).children("option:selected").val();
+					alert("You have selected the country - " + selectedCountry);
+				});
+			});</script>
 		<script type="text/javascript" src="decoratemytext.js"></script>
 	</head>
 
@@ -25,9 +31,9 @@
 
 		<fieldset>
 			<legend>Decoration</legend>
-			<button onclick="keepDecoration();" id="keepDeco">Bigger Decoration</button><br>
-			<button onclick="pigLatin();" id="pigLatin">Igpay Atinlay</button><br>
-			<button onclick="toMalkovitch();" id="malkovitch">Malkovitch</button><br>
+			<button id="keepDeco">Bigger Decoration</button><br>
+			<button id="pigLatin">Igpay Atinlay</button><br>
+			<button id="malkovitch">Malkovitch</button><br>
 			<label > <input id="bling" type="checkbox" > Bling</label>
 			
 
