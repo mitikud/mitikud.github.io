@@ -12,13 +12,13 @@
 
             <div>
 <button onclick="rudyTimer();">Click me!</button> 
-	<div id="output"></div>
+	<div id="divOutput"></div>
 	<script>
 		var rudyTimer = (function(){
 			timer = null; // stores ID of interval timer 
 			
 			function rudy() { // called each time the timer goes off 
-				document.getElementById("output").innerHTML += " Rudy!"; 
+				document.getElementById("divOutput").innerHTML += " Rudy!"; 
 			}
 			return function delayMsg2() { 
 				if (timer === null) { 
