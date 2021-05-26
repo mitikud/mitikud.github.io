@@ -108,6 +108,20 @@ function Employee(first, salary, position) {
 </span>
 <li> Write a Javascript function that takes any number of input arguments and returns the product of the
 arguments.</li>
+<span>
+    <pre>
+        var f = function (a,b,...more){
+            var res = a * b;
+          if(more.length > 0){
+              for(let x =0; x &lt more.length;x++){
+                  res *= more[x];
+              }
+          }
+          return res;
+      };    
+   
+</pre>
+</span>
 <li> Write an arrow function that returns the maximum of its three input arguments</li>
 </ol>
 </body>
