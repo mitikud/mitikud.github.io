@@ -1,42 +1,46 @@
-window.onload = function() {
-    document.getElementById('newAccount').onclick = creatNewAccount;
+'use strict';
+window.onload = function () {
+  document.getElementById('create').onclick = createAccount;
 }
 
-function Account(name, deposit) {
-    var accountName = name;
-    var deposit = deposit;
+function NewAccount(name, dep) {
+  var accname = name;
+  var deposit = dep;
 
-    var newAccount = {
-    
-        'getAccountName' : function(){
-        return accountName;
+  var account = {
+
+    'getAccName': function () {
+      return accname;
     },
-
-        'getDeposite': function(){
-            return deposit;
-        },
-
-        'setAccountName' : function(name){
-            accountName = name;
-        },
-
-        'setDeposit' : function (deposit) {
-            deposit = deposit;
-        }
-        };
-        return newAccount;
+    'getDeposit': function () {
+      return deposit;
+    },
+    'setAccName': function (name) {
+      accname = name;
+    },
+    'setDeposit': function (dep) {
+      deposit = dep;
+    }
+  };
+  return account;
 }
 
-var list = new Array();
+var myList = new Array();
 
-function creatNewAccount() {
-    var acountName =  document.getElementById("accountName").nodeValue;
-    var deposit = document.getElementById("deposit").nodeValue;
-    var newAcct = Account(accountName, deposit);
-    list.push(newAcct);
-    var result = "";
-    for(acct in list){
-        result += "Account Name : " + acct.getAccountName() + ", Deposit : " + acct.getDeposite() + "\n";
-    }
-    document.getElementById("txtArea").nodeValue = result;
+function createAccount() {
+  var accName = document.getElementById('accountname').value;
+  var dep = document.getElementById('deposit').value;
+
+  var acc = NewAccount(accName, dep);
+
+  myList.push(acc);
+
+  var output = "";
+  for (var i = 0; i < myList.length; i++) {
+    output += "Account Name : " + myList[i].getAccName() + ", Deposit : " + myList[i].getDeposit() + "\n";
+  }
+
+  document.getElementById('output').value = output;
+
+
 }

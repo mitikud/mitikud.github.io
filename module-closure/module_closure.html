@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="account.js"></script>
+    
+    <script src="account.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module Closure</title>
 </head>
@@ -21,10 +22,15 @@
                 <li>You should fill the text area by retrieving information from the accounts in the list.Create a simple html page with inputs and button similar to the example below.</li>
             </ul></li>
 
-            <label>Account Name: <input type="text" id="accountName"></label><br>
-            <label>Deposit: <input type="text" id="deposit"></label><br>
-            <button id="newAccount">creat new account</button>
-            <div><textarea cols="80" rows="20" id="txtArea"></textarea></div>
+            <div style="margin-top:30px;" id="wrapper">
+                <b style="margin-right:30px;">Account Name: </b><input id="accountname" name="name" type="text"><br><br>
+                <b style="margin-right:80px;">Deposit:</b><input id="deposit" name="deposit" type="text"><br>
+                <p>
+                    <button id="create">Create new account</button>
+                </p>
+                <textarea id="output" cols="80" rows="20"></textarea>
+            </div>
 
 </body>
+
 </html>
