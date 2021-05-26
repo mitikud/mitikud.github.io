@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <script src="account.js" type="text/javascript"></script>
+    <script src="account.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module Closure</title>
 </head>
@@ -12,7 +12,7 @@
     <ol>
         <li>Rewrite the setIntervalexample </li>
         (the one with function delayMsg2 that prints out ‘Rudy!’)  to use the module pattern.  Call the module ‘rudyTimer’.  I.e., varrudyTimer’= (...  )()  and then use the module as the event handler on the button.  I.e., 
-        <def><button onclick=" rudyTimer’()">Click me!</button></def>
+        <button onclick=" rudyTimer()">Click me!</button>
         <li> Write asmall Javascript application that uses a module for creating different kinds of banking accounts.
             <ul>
                 <li>Do the exercise with the basic object factory module pattern.  Be sure to validate your code through jsHint.</li>
@@ -29,6 +29,16 @@
                     <button id="create">Create new account</button>
                 </p>
                 <textarea id="output" cols="80" rows="20"></textarea>
+            </div>
+
+            <div>
+                <a href="https://validator.w3.org/nu/?doc=https://mitikud.github.io/module-closure/module_closure.html">
+                    <img style="border:0;width:88px;height:31px" src="w3c-html.png" alt="html validator">
+                </a><br />
+                        
+                <a href="https://webster.cs.washington.edu/jslint/?referer">
+                    <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+                   </a>
             </div>
 
 </body>
