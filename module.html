@@ -87,10 +87,24 @@ that takes 2 numbers and returns the smallest of the two, or the square of the t
 <li> Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.</li>
 Employee objects have the following fields: name, salary, position.</li>
 <span>
+    <span>
     <pre>
+function Employee(first, salary, position) {
+    this.firstName = first;
+    this.salary = salary;
+    this.position = position;
+    this.getFullDetail = function () {
+        return this.firstName + " " + "works in the position " + this.position + " and earns $" + this.salary;
+    };
+ 
+  };
 
-
-    </pre>
+  
+  let mitiku = new Employee('mitiku', 250000, "Manager");
+  let mark = new Employee('Mark', 150000, "Employee");
+  let john = new Employee('John', 100000, "supervisor");
+     </pre>
+     </span>
 </span>
 <li> Write a Javascript function that takes any number of input arguments and returns the product of the
 arguments.</li>
