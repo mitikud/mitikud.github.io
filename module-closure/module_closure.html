@@ -9,18 +9,7 @@
     <title>Module Closure</title>
 </head>
 <body>
-    <ol>
-        <li>Rewrite the setIntervalexample </li>
-        (the one with function delayMsg2 that prints out ‘Rudy!’)  to use the module pattern.  Call the module ‘rudyTimer’.  I.e., varrudyTimer’= (...  )()  and then use the module as the event handler on the button.  I.e., 
-        <button onclick=" rudyTimer()">Click me!</button>
-        <li> Write asmall Javascript application that uses a module for creating different kinds of banking accounts.
-            <ul>
-                <li>Do the exercise with the basic object factory module pattern.  Be sure to validate your code through jsHint.</li>
-                <li> should have a button event handler that uses the module to create an account.</li>
-                <li>The moduleshould have a public method for creating the account.  That method will retrieve the account name and deposit entries from the web page andthen set those values into private variables in the accountmodule for the account name and balance.</li>
-                <li>You should have an accountInfoList variable outside the module.  The event handler will store information about each new account in this list and displaythe updated list each time a new account is created.   IMPORTANT REQUIREMENT:  The accountInfoList must hold account objects, not Strings.</li>
-                <li>You should fill the text area by retrieving information from the accounts in the list.Create a simple html page with inputs and button similar to the example below.</li>
-            </ul></li>
+  
 
             <div style="margin-top:30px;" id="wrapper">
                 <b style="margin-right:30px;">Account Name: </b><input id="accountname" name="name" type="text"><br><br>
@@ -34,7 +23,7 @@
             <div>
                 <a href="https://validator.w3.org/nu/?doc=https://mitikud.github.io/module-closure/module_closure.html">
                     <img style="border:0;width:88px;height:31px" src="w3c-html.png" alt="html validator">
-                </a><br />
+                </a><br>
                         
                 <a href="https://webster.cs.washington.edu/jslint/?referer">
                     <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
