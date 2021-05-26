@@ -9,6 +9,29 @@
     <title>Module Closure</title>
 </head>
 <body>
+
+            <div>
+<button onclick="rudyTimer();">Click me!</button> 
+	<div id="output"></div>
+	<script>
+		var rudyTimer = (function(){
+			timer = null; // stores ID of interval timer 
+			
+			function rudy() { // called each time the timer goes off 
+				document.getElementById("output").innerHTML += " Rudy!"; 
+			}
+			return function delayMsg2() { 
+				if (timer === null) { 
+					timer = setInterval(rudy, 1000); 
+				} 
+				else { 
+					clearInterval(timer); timer = null; 
+				} 
+			}
+		})();
+	</script>   
+
+            </div>
   
 
             <div style="margin-top:30px;" id="wrapper">
