@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="account.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module Closure</title>
 </head>
@@ -19,5 +20,11 @@
                 <li>You should have an accountInfoList variable outside the module.  The event handler will store information about each new account in this list and displaythe updated list each time a new account is created.   IMPORTANT REQUIREMENT:  The accountInfoList must hold account objects, not Strings.</li>
                 <li>You should fill the text area by retrieving information from the accounts in the list.Create a simple html page with inputs and button similar to the example below.</li>
             </ul></li>
+
+            <label>Account Name: <input type="text" id="accountName"></label><br>
+            <label>Deposit: <input type="text" id="deposit"></label><br>
+            <button id="newAccount">creat new account</button>
+            <div><textarea cols="80" rows="20" id="txtArea"></textarea></div>
+
 </body>
 </html>

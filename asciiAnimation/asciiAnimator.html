@@ -9,11 +9,12 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script type="text/javascript" src="ascii.js"></script>
+   <script type="text/javascript" src="animations.js"></script>
 </head>
 <body>
    <div id="main">
        <p>CSE 190 M ASCII Animation Viewer</p>
-       <textarea cols="80" rows="20"></textarea>
+       <textarea id="txtArea" cols="80" rows="20" readonly></textarea>
        <div id="section">
            
             <fieldset>
@@ -27,12 +28,12 @@
                <fieldset>
                    <legend>Animation</legend>
                     <select id="animationSelector" name="animationSelector">
-                    <option value="blank">Blank</option>
-                    <option value="excercise">Exercise</option>
-                    <option value="juggler">Juggler</option>
-                    <option value="bike">Bike</option>
-                    <option value="dive">Dive</option>
-                    <option value="custom">Custom</option>
+                        <option value="blank">Blank</option>
+                        <option value="exercise">Exercise</option>
+                        <option value="juggler">Juggler</option>
+                        <option value="bike">Bike</option>
+                        <option value="dive">Dive</option>
+                        <option value="custom">Custom</option>
                 </select>
             </fieldset>
            
@@ -44,7 +45,7 @@
                 
                 <option value="tiny">Tiny</option>
                 <option value="small">Small</option>
-                <option value="medium">Medium</option>
+                <option value="medium" selected>Medium</option>
                 <option value="large">Large</option>
                 <option value="xLarge">Extra Large</option>
                 <option value = "xxLarge">XXL</option>
