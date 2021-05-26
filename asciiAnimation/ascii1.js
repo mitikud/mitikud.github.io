@@ -1,20 +1,40 @@
+/* $(loaded)
+function loaded(){
+    $("mytextarea").value = JUGGLER;
+}
+
+
+$(document).ready(function(){
+    $("select.country").change(function(){
+        var selectedCountry = $(this).children("option:selected").val();
+        alert("You have selected the country - " + selectedCountry);
+    });
+});
+
+$(document).ready(function(){
+    $("select.fontSelector").change(function(){
+        var fontSelectedSize = $(this).children("option:selected").val();
+        alert("You have selected font Size of - " + fontSelectedSize);
+    });
+}); */
+
 (function(){
 
     "use strict"
 
     window.onload = function(){
         document.getElementById("animationSelector").onchange = getAnimationPage;
-        document.getElementById("sizeSelector").onchange = setAnimationSize;
-        document.getElementById("startBtn").onclick = animationLooper;
-        document.getElementById("stopBtn").onclick = animationStopper;
+        document.getElementById("fontSelector").onchange = setAnimationSize;
+        document.getElementById("start").onclick = animationLooper;
+        document.getElementById("stop").onclick = animationStopper;
     };
 
     function getAnimationPage(){
         let e = document.getElementById("animationSelector");
-        let v = document.getElementById("viewBoard")
+        let v = document.getElementById("txtArea")
         if(e.value === "blank"){
             v.innerHTML = BLANK;
-        }else if(e.value === "exercise"){
+        }else if(e.value === "excercise"){
             v.innerHTML = EXERCISE;
         }else if(e.value === "juggler"){
             v.innerHTML = JUGGLER;
@@ -29,19 +49,19 @@
     }
 
     function setAnimationSize(){
-        let e = document.getElementById("sizeSelector");
-        let v = document.getElementById("viewBoard");
-        if(e.value === "t"){
+        let e = document.getElementById("fontSelector");
+        let v = document.getElementById("txtArea");
+        if(e.value === "tiny"){
             v.style.fontSize = "7pt";
-        }else if(e.value === "s"){
+        }else if(e.value === "small"){
             v.style.fontSize = "10pt";
-        }else if(e.value === "m"){
+        }else if(e.value === "medium"){
             v.style.fontSize = "12pt";
-        }else if(e.value === "l"){
+        }else if(e.value === "large"){
             v.style.fontSize = "16pt";
-        }else if(e.value === "xl"){
+        }else if(e.value === "xLarge"){
             v.style.fontSize = "24pt";
-        }else if(e.value === "xxl"){
+        }else if(e.value === "xxLarge"){
             v.style.fontSize = "42pt";
         }
     }
@@ -50,7 +70,7 @@
     var i;
 
     function animationLooper(){
-        let v = document.getElementById("viewBoard");
+        let v = document.getElementById("txtArea");
         let arr = v.innerHTML.split("=====");
         let s;
         if(document.getElementById("turbo").checked){
@@ -69,7 +89,7 @@
                 i = 0;
             }
             v.innerHTML = arr[i];
-            document.getElementById("startBtn").disabled = true;
+            document.getElementById("start").disabled = true;
             document.getElementById("animationSelector").disabled = true;
         }
     }
@@ -77,7 +97,7 @@
     function animationStopper(){
         clearInterval(x);
         getAnimationPage();
-        document.getElementById("startBtn").disabled = false;
+        document.getElementById("start").disabled = false;
         document.getElementById("animationSelector").disabled = false;
     }
 

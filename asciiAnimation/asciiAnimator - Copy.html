@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="asciiAnimator.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCIImation</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="ascii.js"></script>
+   <script src="animations.js"></script>
+</head>
+<body>
+   <div id="main">
+       <p>CSE 190 M ASCII Animation Viewer</p>
+       <textarea id="txtArea" cols="80" rows="20" readonly></textarea>
+       <div id="section">
+           
+            <fieldset>
+                <legend>play control</legend>
+                <button id="play">play</button>
+                <button id="stop">stop</button>
+            </fieldset>
+           
+
+           
+               <fieldset>
+                   <legend>Animation</legend>
+                    <select id="animationSelector" name="animationSelector">
+                        <option value="blank">Blank</option>
+                        <option value="exercise">Exercise</option>
+                        <option value="juggler">Juggler</option>
+                        <option value="bike">Bike</option>
+                        <option value="dive">Dive</option>
+                        <option value="custom">Custom</option>
+                </select>
+            </fieldset>
+           
+
+           
+            <fieldset><legend>size</legend>
+            
+            <select class="fontSelector" name = "size">
+                
+                <option value="tiny">Tiny</option>
+                <option value="small">Small</option>
+                <option value="medium" selected>Medium</option>
+                <option value="large">Large</option>
+                <option value="xLarge">Extra Large</option>
+                <option value = "xxLarge">XXL</option>
+            </select>
+            
+            </fieldset>
+           
+
+           
+               <fieldset><legend>Speed</legend>
+                    <label><input type="checkbox" id="turbo">Turbo</label>
+            </fieldset>
+           
+        </div>
+        <div id="footer">
+            <a href="https://validator.w3.org/nu/?doc=https://mitikud.github.io/asciiAnimation/asciiAnimator.html">
+            <img style="border:0;width:88px;height:31px" src="../w3c-html.png" alt="html validator"><br>
+            </a>
+
+            <a href="https://validator.w3.org/nu/?doc=https://mitikud.github.io/asciiAnimation/asciiAnimator.css">
+                <img style="border:0;width:88px;height:31px" src="../w3c-css.gif" alt="html validator"><br>
+            </a>
+
+            <a href="https://webster.cs.washington.edu/jslint/?referer">
+                <img style="border:0;width:88px;height:31px" src="../w3c-js.png" alt="html validator">
+            </a>
+        </div>
+   </div> 
+   
+</body>
+</html>
