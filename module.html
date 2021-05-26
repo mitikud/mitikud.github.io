@@ -66,7 +66,21 @@ document.write(x);
 When f is called by x.f( ), what does 'this' refer to?</li><sapan>This refers to the object x</sapan>
 <li> What is a free variable in JavaScript?</li><span>A free variables are variables used in the inner function and they are lacal variable or parameters to the enclosing function</span>
 <li>Create an object that has properties with name = "fred" and major="music" and a property that is a function</li>
-that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.</li>
+that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+<span>
+    <pre>
+    var obj = {
+        name:"fred",
+        major:"music",
+        minOrSquare : function(x,y) {
+            if(x === y){
+                return x*y;
+            }
+            return Math.min(x,y)
+        }
+
+        }</pre>
+</span>
 <li> Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.</li>
 Employee objects have the following fields: name, salary, position.</li>
 <li> Write a Javascript function that takes any number of input arguments and returns the product of the
