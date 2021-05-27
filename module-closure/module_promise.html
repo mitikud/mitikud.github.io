@@ -89,38 +89,43 @@ function XFunc () {
         <span><pre>
                     var count = (function(){
                     let counter = 0;
-                    return {
-                        add :function(){
+                        function add(){
                                 return counter++;
                         },
         
-                        reset : function(){
-                            return counter--;
+                        function reset(){
+                            return counter = 0;
                         }
-                    };
+                    
+                        return {
+                            add: add,
+                        reset: reset;
+                        }
     
-                })()
+                })();
 
         </pre></span>
-        <li>In the definition of add( ) shown in question 6, identify the "free" variable. In the context of a function closure, what is a "free" variable? </li> 
+        <li>In the definition of add( ) shown in question 6, identify the "free" variable. In the context of a function closure, what is a "free" variable? </li><span>Free variables are variables local to the enclosing function or parameters of the inclosing function and used in the closure function/functions, in this case counter is a free variable.</span> 
             <li> add( ) function defined in question 6 always adds 1 to the countereach time it is  called. Write a definition of a 
                 function make_adder(inc), whose return value is anaddfunction with increment value inc(instead of 1). Here is an
                  example of using this function:add5 = make_adder(5);add5( );   add5( );   add5( );  // final counter value is 15add7 = make_adder(7);add7( );   add7( );   add7( );  // final counter value is 21</li>
                  <span><pre>
-                        var count = (function(){
+                    var count = (function(){
                         let counter = 0;
+                            function add(n){
+                                    return counter += n;
+                            },
+            
+                            function reset(){
+                                return counter = 0;
+                            }
+                        
                             return {
-                                    add :function(n){
-                                        return counter+=n;
-                                    },
+                                add: add,
+                            reset: reset;
+                            }
         
-                                    reset : function(){
-                                            return counter-=n;
-                                    }
-                                };
-    
-                            })();
-
+                    })();
                  </pre></span>
              <li>you are given a file of Javascript code containing a list of many function and variable declarations. 
                  All of these function and variable names will be added to the Global Javascript namespace. What simple 
@@ -145,31 +150,31 @@ function XFunc () {
             let age;  
             let salary;
             let getAge = function() {
-                return this.age;
+                return age;
             };
             let getName = function() {
-                return this.name;
+                return name;
             };
             let getSalary = function() {
-                return this.salary;
+                return salary;
             };
             let setAge = function(newAge){
-                this.age = newAge;
+                age = newAge;
             };
 
             let setSalary = function(newSalary){
-                this.salary = newSalary;
+                salary = newSalary;
             };
             let incrementAge = function(){
                 getAge++;
             };
 
             let setName = function(newName){
-                this.name = newName;
+                name = newName;
             };
 
             let increaseSalary = function(persentage){
-                return (1 + percentage / 100) *(this.getSalary);
+                return (1 + percentage / 100) *(getSalary);
             };
             return {
                 setAge:setAge,
@@ -190,34 +195,34 @@ function XFunc () {
             let age;  
             let salary;
             let getAge = function() {
-                return this.age;
+                return age;
             };
             let getName = function() {
-                return this.name;
+                return name;
             };
             let getSalary = function() {
-                return this.salary;
+                return salary;
             };
 
             return {
 
-                let setAge : function(newAge){
-                    this.age = newAge;
+                setAge : function(newAge){
+                    age = newAge;
                 },
 
-                let setSalary : function(newSalary){
-                    this.salary = newSalary;
+                setSalary : function(newSalary){
+                    salary = newSalary;
                 },
-                let incrementAge : function(){
-                    this.getAge++;
-                },
-
-                let setName : function(newName){
-                    this.name = newName;
+                incrementAge : function(){
+                    getAge++;
                 },
 
-                let increaseSalary : function(persentage){
-                    return (1 + percentage / 100) *(this.getSalary);
+                setName : function(newName){
+                    name = newName;
+                },
+
+                increaseSalary : function(persentage){
+                    return (1 + percentage / 100) *(getSalary);
                 }               
             
             };
@@ -229,41 +234,40 @@ function XFunc () {
     <li>Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
         <span><pre>
             var Module = (function(){
-                let Employee = {
-                    let name;
-                    let age;  
-                    let salary;
-                };
+                let name;
+                let age;  
+                let salary;
+                let Employee = { };
                
                 let getAge = function() {
-                    return this.age;
+                    return age;
                 };
                 let getName = function() {
-                    return this.name;
+                    return name;
                 };
                 let getSalary = function() {
-                    return this.salary;
+                    return salary;
                 };
-               Employee.publicMethod = function(){
-                let setAge = function(newAge){
-                    this.age = newAge;
+               
+                Employee.setAge = function(newAge){
+                    age = newAge;
                 };
     
-                let setSalary = function(newSalary){
-                    this.salary = newSalary;
+                Employee.setSalary = function(newSalary){
+                    salary = newSalary;
                 };
                 let incrementAge = function(){
                     getAge++;
                 };
     
                 let setName = function(newName){
-                    this.name = newName;
+                   name = newName;
                 };
     
                 let increaseSalary = function(persentage){
-                    return (1 + percentage / 100) *(this.getSalary);
+                    salary = (1 + percentage / 100) *(getSalary);
                 };
-               };
+               
                 return Employee;            
                    
             })();</pre></span>
