@@ -30,6 +30,24 @@
         document.write(x); 
     }</pre><span>undefined, 8, 8, 9, 10, 1</span>
 <li>Define Global Scope and Local Scope in Javascript.</li>
+<span><ul>
+    <li><strong>Global Scope</strong>
+        <ul>
+            <li>It is a scope outside a given function</li>
+            <li>A variable assigned befor it declared has global scope</li>
+        </ul>
+    </li>
+    
+    <li><strong>Local Scope</strong>
+        <ul>
+            <li>It's a scope within a function</li>
+            <li>only accessible from within the function</li>
+            <li>local scop can access from their enclosing functions and other global scopes.</li>
+            <li>Variables declared inside a function have local scope and they are created when the function starts and deleted when the function completed</li>
+        </ul>
+        
+    </li>
+</ul></span>
 <li>Consider the following structure of Javascript code:</li>
 <pre>
 // Scope A 
@@ -103,9 +121,12 @@ function XFunc () {
                             })();
 
                  </pre></span>
-             <li>you are given a file of Javascript code containing a list of many function and variable declarations. All of these function and variable names will be added to the Global Javascript namespace. What simple modification to the Javascript file can remove all the names from the Global namespace?</li>
+             <li>you are given a file of Javascript code containing a list of many function and variable declarations. 
+                 All of these function and variable names will be added to the Global Javascript namespace. What simple 
+                 modification to the Javascript file can remove all the names from the Global namespace?</li><span>create a function statment and put all the methods and fields inside the function and they will be invisible to the external outside that function</span>
 <li>Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object with the following fields and methods:</li>
-<span><pre>PrivateField:  name
+<pre>
+    PrivateField:  name
     Private Field:  age
     Private Field:  salary
     PublicMethod:  setAge(newAge)
@@ -116,7 +137,7 @@ function XFunc () {
     Private Method:  getName( )
     Public Method:  increaseSalary(percentage)// uses 
     private getSalary( )
-    Public Method:  incrementAge( )// uses private getAge( )</pre></span>
+    Public Method:  incrementAge( )// uses private getAge( )</pre>
     <span><pre>
         var Employee = (function(){
             let name;
@@ -205,7 +226,49 @@ function XFunc () {
     </pre></span>
 
     <li>Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
+        <span><pre>
+            var Module = (function(){
+                let Employee = {
+                    let name;
+                    let age;  
+                    let salary;
+                };
+               
+                let getAge = function() {
+                    return this.age;
+                };
+                let getName = function() {
+                    return this.name;
+                };
+                let getSalary = function() {
+                    return this.salary;
+                };
+               Employee.publicMethod = function(){
+                let setAge = function(newAge){
+                    this.age = newAge;
+                };
+    
+                let setSalary = function(newSalary){
+                    this.salary = newSalary;
+                };
+                let incrementAge = function(){
+                    getAge++;
+                };
+    
+                let setName = function(newName){
+                    this.name = newName;
+                };
+    
+                let increaseSalary = function(persentage){
+                    return (1 + percentage / 100) *(this.getSalary);
+                };
+               };
+                return Employee;            
+                   
+            })();</pre></span>
         <li>Write a few Javascript instructionsto extend the Moduleof Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).
+            <span><ul><li>Declear a the address field like the other fields and put it in the return statment</li>
+            <li>Create the methods for setAddress(newAddres) and getAdress like the others methods and put them in the return statment</li></ul></span>
             <li>What is the output of the following code?
                 <pre>const promise = new Promise((resolve, reject) => {reject(“Hattori”);});
                     promise.then(val => alert(“Success: “ + val)).catch(e => alert(“Error: “ + e));</pre><span>Error: Hattori</span>
