@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="span.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -137,25 +138,72 @@ function XFunc () {
             let setSalary = function(newSalary){
                 this.salary = newSalary;
             };
+            let incrementAge = function(){
+                getAge++;
+            };
 
             let setName = function(newName){
                 this.name = newName;
             };
 
             let increaseSalary = function(persentage){
-                return (1 + percentage / 100) *(this.salary);
+                return (1 + percentage / 100) *(this.getSalary);
             };
             return {
                 setAge:setAge,
                 setName: setName,
                 setSalary: setSalary,
-                increaseSalary : increaseSalary
+                increaseSalary : increaseSalary,
+                incrementAge : incrementAge
             };
 
         })();
 
     </pr></span>
 <li>Rewrite your answer to Question 10 using the Anonymous Object Literal Return Pattern.
+
+    <span><pr>
+        var Employee = (function(){
+            let name;
+            let age;  
+            let salary;
+            let getAge = function() {
+                return this.age;
+            };
+            let getName = function() {
+                return this.name;
+            };
+            let getSalary = function() {
+                return this.salary;
+            };
+
+            return {
+
+                let setAge : function(newAge){
+                    this.age = newAge;
+                },
+
+                let setSalary : function(newSalary){
+                    this.salary = newSalary;
+                },
+                let incrementAge : function(){
+                    this.getAge++;
+                },
+
+                let setName : function(newName){
+                    this.name = newName;
+                },
+
+                let increaseSalary : function(persentage){
+                    return (1 + percentage / 100) *(this.getSalary);
+                }               
+            
+            };
+
+        })();
+
+    </pr></span>
+
     <li>Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
         <li>Write a few Javascript instructionsto extend the Moduleof Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).
             <li>What is the output of the following code?
