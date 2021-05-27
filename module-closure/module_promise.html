@@ -45,13 +45,13 @@ function XFunc () {
      (d)  Do statements in Scope C have access to variables defined in Scope A?
      (e)  Do statements in Scope C have access to variables defined in Scope B?</pre>
 <li>What will be printed by the following (answer without running it)?</li>
-    <span><pre>var x= 9;
+    <pre>var x= 9;
         function myFunction() {
             return x* x;
         }
         document.write(myFunction());
         x = 5;
-        document.write(myFunction());</pre></span>
+        document.write(myFunction());</pre>
     <li><pre>var foo = 1;
         function bar() {
             if (!foo) {
@@ -117,7 +117,7 @@ function XFunc () {
     Public Method:  increaseSalary(percentage)// uses 
     private getSalary( )
     Public Method:  incrementAge( )// uses private getAge( )</pre></span>
-    <span><pr>
+    <span><pre>
         var Employee = (function(){
             let name;
             let age;  
@@ -159,10 +159,10 @@ function XFunc () {
 
         })();
 
-    </pr></span>
+    </pre></span>
 <li>Rewrite your answer to Question 10 using the Anonymous Object Literal Return Pattern.
 
-    <span><pr>
+    <span><pre>
         var Employee = (function(){
             let name;
             let age;  
@@ -202,7 +202,7 @@ function XFunc () {
 
         })();
 
-    </pr></span>
+    </pre></span>
 
     <li>Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
         <li>Write a few Javascript instructionsto extend the Moduleof Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).
