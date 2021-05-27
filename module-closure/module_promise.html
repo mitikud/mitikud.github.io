@@ -28,7 +28,7 @@
         c(8,9,10);
         document.write(b);
         document.write(x); 
-    }</pre>
+    }</pre><span>undefined, 8, 8, 9, 10, 1</span>
 <li>Define Global Scope and Local Scope in Javascript.</li>
 <li>Consider the following structure of Javascript code:</li>
 <pre>
@@ -39,11 +39,11 @@ function XFunc () {
           // Scope C 
         };
      };
-     (a)  Do statements in Scope A have access to variables defined in Scope B and C?
-     (b)  Do statements in Scope B have access to variables defined in Scope A?
-     (c)  Do statements in Scope B have access to variables defined in Scope C?
-     (d)  Do statements in Scope C have access to variables defined in Scope A?
-     (e)  Do statements in Scope C have access to variables defined in Scope B?</pre>
+     (a)  Do statements in Scope A have access to variables defined in Scope B and C?<span>NO</span>
+     (b)  Do statements in Scope B have access to variables defined in Scope A?<span>YES</span>
+     (c)  Do statements in Scope B have access to variables defined in Scope C?<span>NO</span>
+     (d)  Do statements in Scope C have access to variables defined in Scope A?<span>YES</span>
+     (e)  Do statements in Scope C have access to variables defined in Scope B?</pre><span>YES</span>
 <li>What will be printed by the following (answer without running it)?</li>
     <pre>var x= 9;
         function myFunction() {
@@ -51,7 +51,7 @@ function XFunc () {
         }
         document.write(myFunction());
         x = 5;
-        document.write(myFunction());</pre>
+        document.write(myFunction());</pre></pre><span>81, 25</span>
     <li><pre>var foo = 1;
         function bar() {
             if (!foo) {
@@ -59,7 +59,7 @@ function XFunc () {
             }
             alert(foo);
         }
-        bar();</pre> What will the alert print out?(Answer without running the code.  Remember ‘hoisting’.)?
+        bar();</pre> What will the alert print out?(Answer without running the code.  Remember ‘hoisting’.)?<span>10</span>
 
     <li> the following definition of an add( ) function to increment a countervariable:<pre>var add = (function () {
         var counter = 0;
@@ -231,7 +231,7 @@ let promise = job(true);promise.then(function(data) {
     console.log(error);
     return 'Error caught';
 });
-<span></span>
+<span>success, error</span>
 </ol>
 </body>
 </html>
