@@ -1,4 +1,8 @@
 span {
-    color: red;
+    color: blue;
+    font-size: 14pt;
+}
+
+em {
     font-size: 14pt;
 }
