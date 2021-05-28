@@ -121,7 +121,7 @@ function XFunc () {
              <li>you are given a file of Javascript code containing a list of many function and variable declarations. 
                  All of these function and variable names will be added to the Global Javascript namespace. What simple 
                  modification to the Javascript file can remove all the names from the Global namespace?</li>
-                 <span>create a function statment and put all the methods and fields inside the function and they will be invisible to the external outside that function</span>
+                 <span>create a function statment and put all the methods and fields inside the function and they will be invisible to outside that function</span>
 <li>Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object with the following fields and methods:</li>
 <pre>
     PrivateField:  name
@@ -266,7 +266,7 @@ function XFunc () {
         <li>Write a few Javascript instructionsto extend the Moduleof Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).
             <span>
                 <pre>
-                     Employee.address = "";
+                    Employee.address = "";
                     Employee.getAddress = function(){
 	                    return this.address;
                     }
