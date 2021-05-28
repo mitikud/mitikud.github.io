@@ -138,9 +138,9 @@ function XFunc () {
     Public Method:  incrementAge( )// uses private getAge( )</pre>
     <span><pre>
         var Employee = (function(){
-            let name;
-            let age;  
-            let salary;
+            let name = "";
+            let age = 0;  
+            let salary = 0;
             let getAge = function() {
                 return age;
             };
@@ -183,9 +183,9 @@ function XFunc () {
 
     <span><pre>
         var Employee = (function(){
-            let name;
-            let age;  
-            let salary;
+            let name = "";
+            let age = 0;  
+            let salary = 0;
             let getAge = function() {
                 return age;
             };
@@ -226,9 +226,9 @@ function XFunc () {
     <li>Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
         <span><pre>
             var Module = (function(){
-                let name;
-                let age;  
-                let salary;
+                let name = "";
+                let age = 0;  
+                let salary = 0;
                 let Employee = { };
                
                 let getAge = function() {
@@ -266,13 +266,13 @@ function XFunc () {
         <li>Write a few Javascript instructionsto extend the Moduleof Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).
             <span>
                 <pre>
-                     Module.address = null;
-                    Module.getAddress = function(){
-	                    return Module.address;
+                     Employee.address = "";
+                    Employee.getAddress = function(){
+	                    return this.address;
                     }
 
-                    Module.setAddress = function(newAddress){
-	                    Module.address = newAddress;
+                    EMployee.setAddress = function(newAddress){
+	                    this.address = newAddress;
                     }   
 
                 </pre>
