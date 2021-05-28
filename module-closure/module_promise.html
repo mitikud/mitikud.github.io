@@ -108,23 +108,16 @@ function XFunc () {
                 function make_adder(inc), whose return value is anaddfunction with increment value inc(instead of 1). Here is an
                  example of using this function:add5 = make_adder(5);add5( );   add5( );   add5( );  // final counter value is 15add7 = make_adder(7);add7( );   add7( );   add7( );  // final counter value is 21</li>
                  <span><pre>
-                    var count = (function(){
-                        let counter = 0;
-                            function add(n){
-                                    return counter += n;
-                            },
-            
-                            function reset(){
-                                return counter = 0;
-                            }
-                        
-                            return {
-                                add: add,
-                            reset: reset;
-                            }
+                    var make_adder = function(inc){
+                        var counter = 0;
+                        var increment = inc;
+                           return function(){
+                                    return counter += inc;
+                                    };
+                           
+                            };
         
-                    })();
-                 </pre></span>
+                    </pre></span>
              <li>you are given a file of Javascript code containing a list of many function and variable declarations. 
                  All of these function and variable names will be added to the Global Javascript namespace. What simple 
                  modification to the Javascript file can remove all the names from the Global namespace?</li>
