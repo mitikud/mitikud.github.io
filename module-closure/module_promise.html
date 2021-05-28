@@ -295,7 +295,8 @@ function XFunc () {
         }
     });
 }
-let promise = job(true);promise.then(function(data) {
+let promise = job(true);
+promise.then(function(data) {
     console.log(data);
     return job(false);
 }).catch(function(error) {
