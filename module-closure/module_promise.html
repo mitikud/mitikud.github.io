@@ -89,18 +89,16 @@ function XFunc () {
         <span><pre>
                     var count = (function(){
                     let counter = 0;
-                        function add(){
+                        return {
+                            add : function(){
                                 return counter++;
                         },
         
-                        function reset(){
-                            return counter = 0;
+                            reset : function(){
+                                return counter = 0;
                         }
                     
-                        return {
-                            add: add,
-                        reset: reset;
-                        }
+                    }
     
                 })();
 
