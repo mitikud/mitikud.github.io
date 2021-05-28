@@ -248,15 +248,15 @@ function XFunc () {
                 Employee.setSalary = function(newSalary){
                     salary = newSalary;
                 };
-                let incrementAge = function(){
+                Employee.incrementAge = function(){
                     getAge++;
                 };
     
-                let setName = function(newName){
+                Employee.setName = function(newName){
                    name = newName;
                 };
     
-                let increaseSalary = function(persentage){
+                Employee.increaseSalary = function(persentage){
                     salary = (1 + percentage / 100) *(getSalary);
                 };
                
@@ -281,10 +281,10 @@ function XFunc () {
                 <pre>const promise = new Promise((resolve, reject) => {reject(“Hattori”);});
                     promise.then(val => alert(“Success: “ + val)).catch(e => alert(“Error: “ + e));</pre><span>Error: Hattori</span>
                     <li>What is the output of the following code?</li>
-                    <pre>const promise = new Promise((resolve, reject) => {resolve(“Hattori”);
-                        setTimeout(()=> reject(“Yoshi”), 500);
+                    <pre>const promise = new Promise((resolve, reject) => {resolve('Hattori');
+                        setTimeout(()=> reject('Yoshi'), 500);
                     });
-                    promise.then(val => alert(“Success: “ + val)).catch(e => alert(“Error: “ + e));</pre>
+                    promise.then(val => alert('Success: ' + val)).catch(e => alert('Error: ' + e));</pre>
                     <span>Success: Hattori</span>
 <li>What is the output of the following code?</li>
     <pre>function job(state) {
