@@ -1,42 +1,42 @@
 "use strict";
 
-$(document).ready(function(){
-    var start =  $("#start");
-    var end = $("#end");
-    var maze = $("#maze");
-    var boundary = $(".boundary");
-    var gameStart = false;
- maze.mouseleave(function(){ loss() });
+var wallHit = false;
+var started = false;
 
- start.click(function(){
-  $("#status").text('Move mouse to End in order to win the game');
-  gameStart = true;
-  if(boundary.hasClass('youlose')){
-   boundary.removeClass('youlose');
-  }
-  boundary.mousemove(function(){ loss(); }) 
- });
+var loseFunc = () => {
+    if (started){
+        $(".boundary").addClass("youlose");
+        $("h2").text("Sorry you lost :[");
+        started = false;
+        wallHit = true;
+    }
+}
 
- end.mousemove(function(){
-  if(gameStart == true) won(); 
-  else if(gameStart && boundary.hasClass('youlose'))  loss(); 
- 
- });
+$(document).ready(() => {
+    $("#congratzImg").hide();
 
- function won(){
-  alert("Hurry!!! you won");
-  gameStart = false;
-  $("#status").text("Hurry!!! you won! please collect your prize money.");
- }
+    $("#start").click((e) => { 
+        console.log("started");
+        started = true;
+        wallHit = false;
+        $(".boundary").removeClass("youlose");
+        $("h2").text("Game On!");
+        $("#congratzImg").hide();
+    });
 
- function loss(){
-  if(gameStart){
-   gameStart = false;
-   boundary.addClass('youlose');
-   $("#status").text('So Sad !!!You lose the game, Try next time');
-  }
- }
+    $("#maze").mouseleave(() => { 
+        loseFunc();
+    });
 
+    $(".boundary").mouseover(() => {
+        loseFunc();
+    });
 
-})
-	
+    $("#end").mouseover(() => {
+        if (started && !wallHit){
+            $("h2").text("You win :]");
+            $("#congratzImg").show();
+            started = false;
+        }
+    });
+});
