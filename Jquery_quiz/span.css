@@ -1,3 +1,8 @@
 span {
-    color: red;
+    color: blue;
+}
+
+body {
+    font-size: 14pt;
+    font-family: 'Times New Roman', Times, serif;
 }
