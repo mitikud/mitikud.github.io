@@ -36,7 +36,7 @@ show it is just text (the red bold is gone).
         &lt;script&gt;
             &lt;!—INSERT YOUR JQUERY CODE HERE - - &gt;
             
-            // [Answer]
+            
             <span class="span">
             $("p:last").text($("p:first").text());
         </span>
@@ -64,7 +64,7 @@ show it is just text (the red bold is gone).
         &lt;li class="item-iii"&gt;III&lt;/li&gt;
     &lt;/ul&gt;
 
-    [Answer]
+    
     <span class="span">
     $(".level-2 li").css("background-color", "red");</span>
 
@@ -78,7 +78,7 @@ background color to blue.
         &lt;li&gt;list item 5&lt;/li&gt;
     &lt;/ul&gt;
 
-    [Answer]
+
     <span class="span">
     $( "li.third-item" ).prev().css( "background-color", "blue" );</span>
 
@@ -87,8 +87,7 @@ described in Chapter 4 of Head First jQuery: "Turkey" in the ingredient list of 
 "Mashed Potatoes" in the vegetarian version. You may assume there is a class "turkey" that identifies
 these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new
 requirement.
-    
-    [Answer]
+
     <span class="span">$("li.turkey").replaceWith("&lt;li class="mashed_potatoes"&gt;Mashed Potatoes&lt;/li&gt;")</span>
 
 5. Write Javascript (jQuery) code to change the color of the parent and grandparent list items of the span
