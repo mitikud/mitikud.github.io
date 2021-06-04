@@ -1,9 +1,6 @@
 exports.add = function (req,res,vals) {
 
-   var result = parseInt(vals.first) + parseInt(vals.second);
-
-    
-    
+   var sum = parseInt(vals.first) + parseInt(vals.second);
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write("<!DOCTYPE html>");
     res.write("<html>");
@@ -12,7 +9,7 @@ exports.add = function (req,res,vals) {
     res.write("</head>");
     res.write("<body>");
     res.write("<p>The sum is: ");
-    res.write(String(result) + "<br>");
+    res.write(String(sum) + "<br>");
     res.write("</p>");
     res.write("<p><a href = 'index.html'>Back to Home</a></p>")
     res.write("</body>");
