@@ -10,8 +10,8 @@ exports.add = function (req,res,vals) {
     res.write("<body>");
     res.write("<h1>The Number Quiz</h1><br>");
     res.write("<p>Your current score is ");
-    res.write("<span> count</span><br>");
-    
+    res.write("<span>");
+    res.write(String(count) + "</span><br>");
     res.write("<form action ='http://localhost:8081/add.js'>");
     res.write("Your answer:  <input type = 'text' name='first'/><br>");
     res.write("<input type='submit' value='Click'/>");
