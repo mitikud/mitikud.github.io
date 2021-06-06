@@ -30,7 +30,8 @@ exports.add = function (req,res,vals) {
     res.write("<p>The result will be: ");
     res.write(String(result) + "<br>");
     res.write("</p>");
-    res.write("<p><a href = 'index.html'>Another Calculation</a></p>")
+    res.write("<p><a href = 'index.html'>Another Calculation</a></p>");
+    
     res.write("</body>");
     res.write("</html>");
     return res.end();
