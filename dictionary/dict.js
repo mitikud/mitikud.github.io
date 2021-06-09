@@ -1,11 +1,6 @@
 
-
-
 $(document).ready(function () {
-
-
-    // $("#lookupKey").click(lookup);
-   
+  
     $("#formid").submit(function (e) {
         e.preventDefault();
         $("#resultdiv").removeClass("resultClass");
@@ -20,19 +15,14 @@ $(document).ready(function () {
 function lookup() {
     let word = $("#lookupWord").val();
     $("#result").html("");
-
-
     console.log("lookup before post ajax");
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:5000/searchword",
+        url: "http://localhost:8080/searchword",
         data: { word: word },
         dataType: "json"
     }).done(function (data) {
-        console.log("inside getttt", Object.keys(data).length);
-
-
         $("#resultdiv").addClass("resultClass"); 
 
         if (Object.keys(data).length) {
