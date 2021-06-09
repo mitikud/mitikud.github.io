@@ -4,18 +4,14 @@ body{
 
 }
 header{
-    background-color: rgb(15, 5, 102);
+    background-color: rgb(83, 83, 83);
     color:#fff;
     font-weight: bold;
     overflow: hidden;
 
 }
 
-header img{
-    width: 200px;
-    height: 100px;
-    float: left;
-}
+
 header h1{
     margin-left: 350px;
 }
@@ -45,28 +41,28 @@ label{
     display: inline;
     height: 40px;
     text-align: center;
-    background-image: url(../images/search.png);
+   
     background-repeat: no-repeat;
     background-size:90%;
     background-position: center;
     border: none;
     float: left;
-    background-color: rgb(2, 104, 2);
+    background-color: rgb(83, 83, 83);
     border-radius: 5px;
     position: relative;
     top: -2px;
     left: -2px;
 }
 #lookupKey:hover{
-    background-color: rgb(39, 145, 39);;
+    background-color: rgb(83, 83, 83);
 }
 .resultClass{
     font-family: 'Times New Roman', Times, serif;
     width: 60%;
     margin: auto;
-    background-color:rgb(161, 196, 241);
+    background-color:rgb(249, 249, 250);
     color: black;
-    border-radius: 30px;
+   
     padding: 10px;
 }
 .noresult{
