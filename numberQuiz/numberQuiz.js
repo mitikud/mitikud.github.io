@@ -1,105 +1,135 @@
+exports.guessnumber = function (req, res, vals) {
+  var score = 0;
+  let hidden = parseInt(vals.get("quiznumber"));
+  let youranswer = parseInt(vals.get("youranswer"));
+  let prevscore = parseInt(vals.get("score"));
+  // console.log("hidden" + hidden);
 
-var http = require("http");
-var url = require("url");
-var querystring = require('querystring');
+  // console.log("your answer" + youranswer);
+  const nums = {
+    pi: [3, 1, 4, 1, 5],
+    fib: [1, 1, 2, 3, 5],
+    sq: [1, 4, 9, 16, 25],
+    pr: [2, 3, 5, 7, 11],
+    pow: [1, 2, 4, 8, 16],
+  };
+  const answer = [9, 8, 36, 13, 32];
+  let quiznumber = 0;
+  score = score + prevscore;
 
-var userAns = [];
-var score = 0;
-
-http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-
-    if(req.method === "GET") {
-        
-        var queryVariables = JSON.parse(JSON.stringify(url.parse(req.url, true).query));
-        
-        if(Object.keys(queryVariables).length > 0) {
-            let qNum = parseInt(queryVariables.qNum);
-            userAns.push(parseInt(queryVariables.num));
-            score = quizAns.filter(e => userAns.indexOf(e) !== -1).length;
-            
-            if(qNum < quizQuestions.length) {
-                // console.log(qNum);
-                res.write(getForm(qNum));
-            } else {
-                // console.log(score);
-                res.write(getQuizResult());
-            }
-        } else {
-            res.write(getForm(0));
-        }
-        
-    } else {
-        
-        // var queryVariables = url.parse(req.url, true).query;
-        // console.log(queryVariables);
-        // res.write("queryVariables.num");
-    }
-    
-    // res.write(url.parse(req.num, true).query);
-    res.end();
-}).listen(8080);
-
-var quizQuestions = [
-    [3, 1, 4, 1, 5],
-    [1, 1, 2, 3, 5],
-    [1, 4, 9, 16, 25],
-    [2, 3, 5, 7, 11],
-    [1, 2, 4, 8, 16],
-];
-var quizAns = [9, 8, 36, 13, 32];
-
-
-
-var getForm = function(qn) {
-    var nextQ;
-    var questionNumber = 0;
-    switch(qn) {
-        case 0:
-            nextQ = quizQuestions[0].toString();
-            questionNumber = 1;
-            break;
-        case 1: 
-            nextQ = quizQuestions[1].toString();
-            questionNumber = 2;
-            break;
-        case 2: 
-            nextQ = quizQuestions[2].toString();
-            questionNumber = 3;
-            break;
-        case 3: 
-            nextQ = quizQuestions[3].toString();
-            questionNumber = 4;
-            break;
-        case 4: 
-            nextQ = quizQuestions[4].toString();
-            questionNumber = 5;
-            break;
-    }
-    var quizForm = "<form method='get' action='http://localhost:8080/'>";
-    quizForm += "<div>";
-        quizForm += "<h1>The Number Quiz</h1>";
-        quizForm += "<p>Your current score is " + score + ".</p>";
-        quizForm += "<p>Guess the next number in the sequence.</p>";
-        quizForm += "<p>" + nextQ + "</p>";
-        quizForm += "<p>Your Answer:<input type='number' name='num'></p>";
-        quizForm += "<input type='hidden' name='qNum' value='" + questionNumber + "'>";
-        quizForm += "<button type='submit'>Submit</button>";
-    quizForm += "</div>";
-    quizForm += "</form>";
-
-    return quizForm;
-}
-
-let getQuizResult = function() {
-    let result = "<div>";
-    result += "<h1>The Number Quiz</h1>";
-        result += "<p>Your current score is " + score + ".</p>";
-        result += "<p>You have completed the number quiz, with a score of " + 
-            score + " out of " + quizQuestions.length + ".</p>";
-    result += "</div>";
-
+  if (!hidden) {
+    hidden = 1;
     score = 0;
-    return result;
-}
 
+    displayQuestion(req, res, nums.pi, score, hidden);
+  } else {
+    switch (hidden) {
+      case 1:
+        hidden++;
+        if (youranswer == answer[0]) {
+          score++;
+          displayQuestion(req, res, nums.fib, score, hidden);
+        } else {
+          displayQuestion(req, res, nums.fib, score, hidden);
+        }
+        break;
+      case 2:
+        hidden++;
+        if (youranswer == answer[1]) {
+          score++;
+          displayQuestion(req, res, nums.sq, score, hidden);
+        } else {
+          displayQuestion(req, res, nums.sq, score, hidden);
+        }
+        break;
+      case 3:
+        hidden++;
+        if (youranswer == answer[2]) {
+          score++;
+          displayQuestion(req, res, nums.pr, score, hidden);
+        } else {
+          displayQuestion(req, res, nums.pr, score, hidden);
+        }
+        break;
+      case 4:
+        hidden++;
+        if (youranswer == answer[3]) {
+          score++;
+          displayQuestion(req, res, nums.pow, score, hidden);
+        } else {
+          displayQuestion(req, res, nums.pow, score, hidden);
+        }
+        break;
+      case 5:
+        hidden++;
+        if (youranswer == answer[4]) {
+          score++;
+          displayfnalMesg(req, res, score, answer.length);
+        } else {
+          displayfnalMesg(req, res, score, answer.length);
+        }
+        break;
+      default:
+        break;
+    }
+  }
+};
+function displayQuestion(req, res, list, score, hidden) {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.write("<!DOCTYPE html>");
+  res.write("<html>");
+  res.write('<head><meta charset="utf-8"/>');
+  res.write("<title>Quiz Game</title>");
+  res.write("</head>");
+  res.write("<body>");
+  res.write('<form action="http://localhost:8080/">');
+  res.write("<label name=quiznumber>");
+  res.write(`<input type="hidden" name="quiznumber" value=${hidden} />`);
+  res.write("<div>");
+  res.write("<p> your score is :");
+  res.write(`<input type="text" name="score" value=${score} readonly/>`);
+  res.write("</p>");
+  res.write("<p>Guess the next number in the sequence.</p>");
+  res.write("<p>");
+  res.write(String(list));
+  res.write("</p>");
+  res.write("<label>your answer:</label>");
+  res.write('<input type="text" name="youranswer"/>');
+  res.write("<br/>");
+  res.write('<input type="submit" value="Submit"/>');
+  res.write("</div>");
+  res.write("</form>");
+
+  res.write(
+    "<a href='startquiz.html'>Start over</a>"
+  );
+  res.write("</body>");
+  res.write("</html>");
+  return res.end();
+}
+function displayfnalMesg(req, res, score, ans) {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.write("<!DOCTYPE html>");
+  res.write("<html>");
+  res.write('<head><meta charset="utf-8"/>');
+  res.write("<title>Quiz Game</title>");
+  res.write("</head>");
+  res.write("<body>");
+  res.write("<div>");
+  res.write("<h1> The Number Quiz");
+  res.write("</h1>");
+  res.write("<p>your current score is</p>");
+  res.write(`${score}`);
+  res.write("<p> You have completed the Number Quiz, with a score of ");
+  res.write(`${score}`);
+  res.write("out of ");
+  res.write(`${ans}`);
+  res.write("</p>");
+  res.write(
+    "<a href='startquiz.html'>Start over</a>"
+  );
+  res.write("</div>");
+  res.write("</body>");
+  res.write("</html>");
+  return res.end();
+}

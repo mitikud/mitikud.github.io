@@ -12,7 +12,7 @@ exports.add = function (req,res,vals) {
     res.write("<p>Your current score is ");
     res.write("<span>");
     res.write(String(count) + "</span><br>");
-    res.write("<form action ='http://localhost:8081/add.js'>");
+    res.write("<form action ='http://localhost:8080/add.js'>");
     res.write("Your answer:  <input type = 'text' name='first'/><br>");
     res.write("<input type='submit' value='Click'/>");
     res.write("</form>");
