@@ -4,16 +4,18 @@ body{
 
 }
 header{
-    background-color: rgb(83, 83, 83);
+    background-color: rgba(85, 85, 84, 0.952);
     color:#fff;
     font-weight: bold;
     overflow: hidden;
+    clear: both;
+    margin-bottom: 0;
 
 }
 
 
 header h1{
-    margin-left: 350px;
+    margin-left: 30px;
 }
 
 form{
@@ -41,26 +43,26 @@ label{
     display: inline;
     height: 40px;
     text-align: center;
-   
     background-repeat: no-repeat;
     background-size:90%;
     background-position: center;
     border: none;
     float: left;
-    background-color: rgb(83, 83, 83);
+    
     border-radius: 5px;
     position: relative;
     top: -2px;
     left: -2px;
 }
 #lookupKey:hover{
-    background-color: rgb(83, 83, 83);
+    background-color: rgba(85, 85, 84, 0.952);
+    color: #fff;
 }
 .resultClass{
     font-family: 'Times New Roman', Times, serif;
     width: 60%;
     margin: auto;
-    background-color:rgb(249, 249, 250);
+  
     color: black;
    
     padding: 10px;
@@ -71,11 +73,4 @@ label{
 }
 #searchdiv{
     margin: 0 auto;
-}
-#loader{
-    display: none;
-}
-#loader img{
-    width: 50px;
-    height: 50px;
 }
